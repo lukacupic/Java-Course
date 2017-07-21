@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Nature Photo Gallery</title>
+
+    <style>
+        div.thumbBox {
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+
+    <script type="text/javascript"><!--
+
+    function showPicture(picture, description, tags) {
+        document.getElementById('id01').style.display='block';
+
+        var url = "servlets/get-picture?name=" + picture;
+
+        var html = '<br>' + tags + '<br>' + '<img src="' + url + '"/>';
+        html += '<span onclick="document.getElementById(\'id01\').style.display=\'none\'" class="w3-button w3-display-topright">&times;</span>';
+
+        var header = '<h2>' + description + '</h2>';
+        document.getElementById("header").innerHTML = header;
+
+        document.getElementById("picture").innerHTML = html;
+    }
+
+    function showThumbs(tag) {
+        var xmlhttp;
+
+        if (window.XMLHttpRequest) {
+            xmlhttp=new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = function() {
+            if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+                var text = xmlhttp.responseText;
+                var pics = JSON.parse(text);
+                var html = "";
+
+                for(var i = 0; i < pics.length; i++) {
+                    var url = "servlets/get-thumb?name=" + pics[i].name;
+
+                    html += '<img src="' + url + '" onClick="showPicture(\'' + pics[i].name + '\', \'' + pics[i].description + '\', \'' + pics[i].tags + '\')"/>';
+                }
+                document.getElementById("thumbs").innerHTML = html;
+            }
+        }
+        xmlhttp.open("GET", "servlets/thumbs?tag=" + tag, true);
+        xmlhttp.send();
+    }
+
+    function getTags() {
+        var xmlhttp;
+
+        if (window.XMLHttpRequest) {
+            xmlhttp=new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlhttp.onreadystatechange = function() {
+            if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+                var text = xmlhttp.responseText;
+                var tags = JSON.parse(text);
+                var html = "";
+
+                for(var i = 0; i < tags.length; i++) {
+                    html += '<input type="button" value="' + tags[i] + '" class="w3-button w3-black" onClick="showThumbs(\'' + tags[i] + '\')" />';
+                }
+                document.getElementById("tags").innerHTML = html;
+            }
+        }
+        xmlhttp.open("GET", "servlets/tags", true);
+        xmlhttp.send();
+    }
+    //-->
+
+
+    </script>
+
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body onload="getTags()">
+<h2 class="w3-container w3-teal">Nature Photo Gallery</h2>
+
+<div align="center" id="tags">&nbsp;</div>
+<br>
+
+<div class="thumbBox" id="thumbs">&nbsp;</div>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+        <header id="header" class="w3-container w3-teal">
+        </header>
+        <div align="center" id="picture" class="w3-container">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

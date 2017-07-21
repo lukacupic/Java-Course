@@ -1,0 +1,11 @@
+{$ FOR a 1 10 $}
+    {$ FOR b "1" "10" "1" $}
+        {$ FOR c_3 1 10 1 $}
+            {$ FOR cetrdeset_dva 1 "-10" $}
+                {$ FOR i "1" 10 1 $}
+                    {$= i $}
+                {$END$}
+            {$END$}
+        {$END$}
+    {$END$}
+{$END$}

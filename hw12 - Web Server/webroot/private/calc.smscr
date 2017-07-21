@@ -1,0 +1,40 @@
+{$ = "text/html" @setMimeType $}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Zbrajanje</h1>
+
+<table>
+  <tr>
+    <td>a</td>
+    <td>{$ = "a" 0 @tparamGet $}</td>
+  </tr>
+  <tr>
+    <td>b</td>
+    <td>{$ = "b" 0 @tparamGet $}</td>
+  </tr>
+  <tr>
+      <td>a+b</td>
+      <td>{$ = "zbroj" 0 @tparamGet $}</td>
+    </tr>
+</table>
+
+</body>
+</html>
