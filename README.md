@@ -5,7 +5,8 @@ This repository contains solved homework problems from the **Basics of the Java 
 An introduction to the Java programming language. No object-oriented paradigm is used here; only a demonstration of how to write simple programs in Java.
 
 ## Homework 2 - Custom Collections
-The concept of classes is introduced. The task was to create a custom implementation of the array-backed and the linked-list-backed collections for storing elements. The last task was to create a class representing complex numbers, with an additional feature to support parsing strings into complex number objects.
+The concept of classes is introduced. The task was to create a custom implementation of the array-backed and the linked-list-backed collections for storing elements.
+*The last task was to create a class representing complex numbers, with an additional feature to support parsing strings into complex number objects.
 
 ## Homework 3 - Lexer and Parser
 The task was to createa a simple lexer and a parser for a custom script language - SmartScript.
