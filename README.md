@@ -18,6 +18,8 @@ The second task was to write a simple database emulator. The database itself is 
 ## Homework 5 - Collections
 The homework introduced the concept of design patterns, using the Observer design pattern, which had to used as the implementation of the first problem. The second task was to create a collection of prime numbers which, obviously, generates prime numbers. The next collection to implement was an ObjectMultistack. This thing stores objects in a map-like way, but instead of mapping a single key to a single value, it maps a key to a stack of values. Talk about abstraction... And the last thing was to use the Java Stream API for manipulating collections.
 
+TODO:
+
 ## Homework 6 - Files
 
 ## Homework 7 - Boolean Expressions Parser
