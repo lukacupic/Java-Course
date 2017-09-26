@@ -21,8 +21,6 @@ This repository contains solved homework problems from the **Java Course** at th
 * created the ObjectMultistack collection which behaves in a map-like way, but instead of mapping a single key to a single value, it maps a key to a stack of values. Talk about abstraction...
 * used the Java Stream API for manipulating various collections
 
-TODO:
-
 ## Homework 6 - Files
 * created a program which allows encryption and decryption of files using the AES algorithm and offers calculation and verification of the SHA-256 file digest.
 * implemented a custom shell interface, MyShell, with which the user can interact with. This is a list of available commands:
@@ -38,6 +36,18 @@ TODO:
   * help - provides help for the specified command (```help help``` is also allowed — how meta is that?!)
 
 ## Homework 7 - Boolean Expressions Parser
+* implemented a lexer which accepts the following logical operators: AND, OR, NOT, XOR
+* implemented a recursive descent parser which supports the following grammar:
+```S  -> E1
+E1 -> E2 (OR E2)*
+E2 -> E3 (XOR E3)*
+E3 -> E4 (AND E4)*
+E4 -> NOT E4 | E5
+E5 -> VAR | CONST | '(' E1 ')'
+```
+* implemented a truth table generator
+* implemented an expression evaluator for evaluating boolean expressions
+* implemented a few other boolean expression details
 
 ## Homework 8 - Quine McCluskey Minimizer
 
