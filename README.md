@@ -2,25 +2,40 @@
 This repository contains solved homework problems from the **Java Course** at the Faculty of Electrical Engineering and Computing, held by Marko Čupić.
 
 ## Homework 1 - Introduction to Java
-An introduction to the Java programming language. No object-oriented paradigm is used here; only a demonstration of how to write simple programs in Java.
+* wrote a few simple programs in Java; no object-oriented paradigm is used here
 
 ## Homework 2 - Custom Collections
-The concept of classes is introduced. The task was to create a custom implementation of the array-backed and the linked-list-backed collections for storing elements.
-*The last task was to create a class representing complex numbers, with an additional feature to support parsing strings into complex number objects.
+* implemented a custom array-backed and linked-list-backed collections
+* created a ComplexNumber class, which supports various features, including parsing a string into a ComplexNumber
 
 ## Homework 3 - Lexer and Parser
-The task was to createa a simple lexer and a parser for a custom script language - SmartScript.
+* implemented a lexer and a parser for a custom script language - SmartScript
 
 ## Homework 4 - Hash Table and Simple Database
-Created an implementation of a Hash Table. This implementation uses a linked list for collision resolution.
-The second task was to write a simple database emulator. The database itself is stored in a textual file, and the program allows query commands for fetching the items from the database. The loaded database contents are internally managed using the hash table from the previous problem.
+* implemented a custom hash table collection, which uses a linked list for collision resolution
+* wrote a simple database emulator (which relies on the previously created collection) which allows query commands for fetching various items from the database
 
 ## Homework 5 - Collections
-The homework introduced the concept of design patterns, using the Observer design pattern, which had to used as the implementation of the first problem. The second task was to create a collection of prime numbers which, obviously, generates prime numbers. The next collection to implement was an ObjectMultistack. This thing stores objects in a map-like way, but instead of mapping a single key to a single value, it maps a key to a stack of values. Talk about abstraction... And the last thing was to use the Java Stream API for manipulating collections.
+* implemented a simple notification system for numerical changes which uses the **Observer design pattern**
+* created a collection for generating prime numbers
+* created the ObjectMultistack collection which behaves in a map-like way, but instead of mapping a single key to a single value, it maps a key to a stack of values. Talk about abstraction...
+* used the Java Stream API for manipulating various collections
 
 TODO:
 
 ## Homework 6 - Files
+* created a program which allows encryption and decryption of files using the AES algorithm and offers calculation and verification of the SHA-256 file digest.
+* implemented a custom shell interface, MyShell, with which the user can interact with. This is a list of available commands:
+  * cat - writes the contents of the specified file onto the console
+  * copy - copies the specified file to another location
+  * exit - terminates the shell
+  * hexdump - dumps a hex representation of the contents of the specified file onto the console
+  * charsets - lists all available system charsets onto the console
+  * ls - lists all files and directories in the specified directory
+  * mkdir - creates a new directory on the specified location
+  * symbol - prints out or replaces the shell prompt symbol
+  * tree - writes a tree-like structure of the specified directory to the standard output, recursively listing all files and subdirectories under the given directory
+  * help - provides help for the specified command (```help help``` is also allowed — how meta is that?!)
 
 ## Homework 7 - Boolean Expressions Parser
 
