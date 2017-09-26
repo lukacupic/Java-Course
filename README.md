@@ -1,5 +1,5 @@
 # JavaCourse
-This repository contains solved homework problems from the **Basics of the Java programming language** course at the Faculty of electrical engineering and computing, held by Marko Čupić.
+This repository contains solved homework problems from the **Java Course** at the Faculty of Electrical Engineering and Computing, held by Marko Čupić.
 
 ## Homework 1 - Introduction to Java
 An introduction to the Java programming language. No object-oriented paradigm is used here; only a demonstration of how to write simple programs in Java.
