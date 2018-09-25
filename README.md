@@ -62,7 +62,7 @@ E5 -> VAR | CONST | '(' E1 ')'
 ## Homework 10 - Introduction to Swing
 * implemented a custom layout manager - CalcLayout - for managing the elements of a custom calculator
 * implemented a custom calculator which supports default calculating operations (addition, subtraction, multiplication, division) as well as some scientific operations (trigonometric and inverse trigonometric functions, exponents, logarithms etc.)
-* implemented a bar chart for dynamically displaying a collection of x-y pairs
+* implemented a bar chart for dynamically displaying a collection of (x, y) pairs
 * implemented a simple generator of prime numbers in Swing
 
 ## Homework 11 - Simple Text Editor
