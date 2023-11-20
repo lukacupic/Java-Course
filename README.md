@@ -1,5 +1,5 @@
 # Java Course
-This repository contains solved homework problems from the **Java Course** at the Faculty of Electrical Engineering and Computing, held by lecturer doc. dr. sc. Marko Čupić.
+This repository contains solved homework problems from the **Java Course** at the Faculty of Electrical Engineering and Computing, held by lecturer izv. prof. dr. sc. Marko Čupić.
 
 ## Homework 1 - Introduction to Java
 * wrote a few simple programs in Java; no object-oriented paradigm is used here
